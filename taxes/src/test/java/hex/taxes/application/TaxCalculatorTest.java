@@ -1,6 +1,5 @@
 package hex.taxes.application;
 
-import hex.taxes.adapters.out.InMemoryTaxRepository;
 import hex.taxes.application.ports.in.ForCalculatingTaxes;
 import org.junit.jupiter.api.Test;
 

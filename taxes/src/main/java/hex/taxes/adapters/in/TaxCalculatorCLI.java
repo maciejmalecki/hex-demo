@@ -1,6 +1,6 @@
 package hex.taxes.adapters.in;
 
-import hex.taxes.adapters.out.InMemoryTaxRepository;
+import hex.taxes.adapters.out.FileTaxRepository;
 import hex.taxes.application.TaxCalculator;
 import hex.taxes.application.ports.in.ForCalculatingTaxes;
 
@@ -27,6 +27,6 @@ public class TaxCalculatorCLI {
         }
 
         var amount = new BigDecimal(args[0]);
-        new TaxCalculatorCLI(new TaxCalculator(new InMemoryTaxRepository())).calculate(amount);
+        new TaxCalculatorCLI(new TaxCalculator(new FileTaxRepository())).calculate(amount);
     }
 }
