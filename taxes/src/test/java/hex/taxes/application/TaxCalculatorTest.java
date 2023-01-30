@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TaxCalculatorTest {
 
-    @Test void shouldTaxOnReturnZero() {
-        ForCalculatingTaxes calculator = new TaxCalculator();
-        assertEquals(BigDecimal.ZERO, calculator.taxOn(BigDecimal.ZERO));
+    @Test void shouldReturnTenPercent() {
+        ForCalculatingTaxes testedObject = new TaxCalculator();
+        assertEquals(BigDecimal.valueOf(10), testedObject.taxOn(BigDecimal.valueOf(100)));
     }
 }
